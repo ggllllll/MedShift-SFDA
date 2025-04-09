@@ -112,7 +112,7 @@ class UNet(nn.Module):
         # fea = x
         # output = self.up5(x)
 
-        # 后加
+   
         f_cup = F.relu(self.bn_cup(self.aff_cup(feature)))  ###bn
         f_disc = F.relu(self.bn_disc(self.aff_disc(feature)))
 
