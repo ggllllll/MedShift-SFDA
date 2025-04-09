@@ -3,7 +3,7 @@ from PIL import Image
 from os.path import join
 
 img_pair_list = list()
-with open(r'D:\2023\qww\BMBMBM\测试\Dermoscopy(皮肤镜检查)\uwaterlooskincancer/train_images - 副本.csv', 'r') as f:
+with open(r'', 'r') as f:
     img_in_csv = f.read().split('\n')[1:-1]
     img_pair_list += img_in_csv
 with open(join(r'E:\Paper\PythonPro\SFUDA\SFDA-AdaMI-main\sizes', 'MESSIDOR_Base3_unlabeled.csv'), 'w') as f:
