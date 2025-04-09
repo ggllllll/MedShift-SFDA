@@ -17,7 +17,7 @@ pip install -r requirements.txt
 - 3. Six Methods: 
 ```shell
 1. DPL Model:
-(1) Generation phase: Generate target domain pseudo-labels
+(1) Generation phase: generate target domain pseudo-labels
 python generate_pseudo.py
-(2) Adaptation stage: the source model adapts to the target domain
+(2) Adaptation stage: source model adapts to the target domain
 python Train_target.py
