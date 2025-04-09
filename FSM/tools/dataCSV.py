@@ -6,8 +6,8 @@ from os.path import join
 train_data_type = '.tif'
 mask_data_type = '.tif'
 
-Original_vali_img_path = r'D:\2021\jjh\SFDA\SFDA-FSM-main\data\RIM-ONE-r3\Labeled\fine'
-Original_vali_img_path_1 = r'D:\2021\jjh\SFDA\SFDA-FSM-main\data\RIM-ONE-r3\Labeled'
+Original_vali_img_path = r''
+Original_vali_img_path_1 = r''
 
 file_train_list = [file for file in os.listdir(Original_vali_img_path) if file.lower().endswith(train_data_type)]
 print(str(len(file_train_list)))
