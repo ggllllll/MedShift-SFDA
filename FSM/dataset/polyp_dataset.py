@@ -29,52 +29,33 @@ def calculateCompact(image):
     return np.nan_to_num(np.asarray(100 * S / C ** 2, np.float32))
 
 def randomRotation(image, label):
-    """
-    对图像进行随机任意角度(0~360度)旋转
-    :param mode 邻近插值,双线性插值,双三次B样条插值(default)
-    :param image PIL的图像image
-    :return: 旋转转之后的图像
-    """
+
     random_angle = np.random.randint(1, 60)
     return image.rotate(random_angle, Image.BICUBIC), label.rotate(random_angle, Image.NEAREST)
 
 def randomColor(image):
-    """
-    对图像进行颜色抖动
-    :param image: PIL的图像image
-    :return: 有颜色色差的图像image
-    """
-    random_factor = np.random.randint(0, 31) / 10.  # 随机因子
-    color_image = ImageEnhance.Color(image).enhance(random_factor)  # 调整图像的饱和度
-    random_factor = np.random.randint(10, 21) / 10.  # 随机因子
-    brightness_image = ImageEnhance.Brightness(color_image).enhance(random_factor)  # 调整图像的亮度
-    random_factor = np.random.randint(10, 21) / 10.  # 随机因1子
-    contrast_image = ImageEnhance.Contrast(brightness_image).enhance(random_factor)  # 调整图像对比度
-    random_factor = np.random.randint(0, 31) / 10.  # 随机因子
-    return ImageEnhance.Sharpness(contrast_image).enhance(random_factor)  # 调整图像锐度
+
+    random_factor = np.random.randint(0, 31) / 10.  
+    color_image = ImageEnhance.Color(image).enhance(random_factor)  
+    random_factor = np.random.randint(10, 21) / 10. 
+    brightness_image = ImageEnhance.Brightness(color_image).enhance(random_factor)  
+    random_factor = np.random.randint(10, 21) / 10.  
+    contrast_image = ImageEnhance.Contrast(brightness_image).enhance(random_factor)  
+    random_factor = np.random.randint(0, 31) / 10. 
+    return ImageEnhance.Sharpness(contrast_image).enhance(random_factor) 
 
 def randomGaussian(image, mean=0.2, sigma=0.3):
-    """
-    对图像进行高斯噪声处理
-    :param image:
-    :return:
-    """
+
 
     def gaussianNoisy(im, mean=0.2, sigma=0.3):
-        """
-        对图像做高斯噪音处理
-        :param im: 单通道图像
-        :param mean: 偏移量
-        :param sigma: 标准差
-        :return:
-        """
+
         for _i in range(len(im)):
             im[_i] += random.gauss(mean, sigma)
         return im
 
-    # 将图像转化成数组
+
     img = np.asarray(image)
-    #img.flags.writeable = True  # 将数组改为读写模式
+    #img.flags.writeable = True  
     width, height = img.shape[:2]
     img_r = gaussianNoisy(img[:, :, 0].flatten(), mean, sigma)
     img_g = gaussianNoisy(img[:, :, 1].flatten(), mean, sigma)
