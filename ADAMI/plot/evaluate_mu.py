@@ -6,8 +6,7 @@ import xlwt
 def return_list(data_path,data_type):
     file_list = [file for file in os.listdir(data_path) if file.lower().endswith(data_type)]
     return file_list
-# 标签图像的  背景0    OD255   OC128  不一样
-# 标签图像的  背景255  OD128   OC0  不一样
+
 def eval_print_all_CU(pred_img_path, gt_img_path):
     f = open(pred_img_path + "_preCDR.txt", "a")
     new_workbook = xlwt.Workbook()
@@ -71,9 +70,6 @@ def eval_print_all_CU(pred_img_path, gt_img_path):
         cv2.drawContours(pred_RGB, cnt_od, -1, (0, 255, 0), 3)
 
         cv2.imwrite(os.path.join(pred_img_path, 'TRUE_' + temp_list[:-4] + '.png'), pred_RGB)
-        # 画图 end
-        # CDR 为 预测和真实cdr的误差，  p_cdr 是预测的cdr用于ROC曲线
-        # 修改 0 255 128 顺序为 背景255  OD128   OC0
         pred[pred == 0] = 1
         pred[pred == 128] = 0
         pred[pred == 255] = 128
