@@ -11,4 +11,4 @@ conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=11
 pip install -r requirements.txt
 ```
 ### Method
-- 1. [DPL](https://github.com/cchen-cc/SFDA-DPL)
+- 1. Source-Free Domain Adaptive Fundus Image Segmentation with Denoised Pseudo-Labeling[DPL](https://github.com/cchen-cc/SFDA-DPL)
