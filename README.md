@@ -17,19 +17,19 @@ pip install -r requirements.txt
 - 3. Six Methods: 
 ```shell
 1. DPL Method:
-(1) Source code link:
+(1) Source code link: [DPL](https://github.com/cchen-cc/SFDA-DPL)
 (2) Please click on the MedShift-SFDA file and enter the DPL
 (3) Generation phase: generate target domain pseudo-labels
 python generate_pseudo.py
 (4) Adaptation stage: source model adapts to the target domain
 python train_target.py
 2. CBMT Method:
-(1) Source code link:
+(1) Source code link: [CBMT](https://github.com/lloongx/SFDA-CBMT)
 (2) Please click on the MedShift-SFDA file and enter the CBMT
 (3) Adaptation stage: source model adapts to the target domain
 python train_target.py
 3. CPR Method:
-(1) Source code link:
+(1) Source code link: [CPR](https://github.com/xmed-lab/CPR)
 (2) Please click on the MedShift-SFDA file and enter the CPR
 (3) Generation phase: generate target domain pseudo-labels
 python generate_pseudo.py
@@ -39,35 +39,21 @@ python sim_learn.py
 python pl_refine.py
 python train_target.py
 4. PCPDL Method:
-(1) Source code link:
+(1) Source code link: [PCPDL](https://github.com/M4cheal/PCDCL-SFDA)
 (2) Please click on the MedShift-SFDA file and enter the PCPDL
 (3) Generation phase: generate target domain pseudo-labels
 python generate_pseudo.py
 (4) Adaptation stage: source model adapts to the target domain
 python train_target.py
 5. FSM Method:
-(1) Source code link:
+(1) Source code link: [FSM](https://github.com/CityU-AIM-Group/SFDA-FSM)
 (2) Please click on the MedShift-SFDA file and enter the FSM
 (3) Generate source-like images
 python domain_inversion.py
 (4) Adaptation stage: source model adapts to the target domain
 python train_adapt.py 
 5. ADAMI Method:
-(1) Source code link:
+(1) Source code link: [ADAMI](https://github.com/mathilde-b/SFDA****)
 (2) Please click on the MedShift-SFDA file and enter the ADAMI
 (3) Adaptation stage: source model adapts to the target domain
 python train_target.py
-
-
-
-
-
-
-
-
-
-
-
-
-
-
