@@ -52,7 +52,7 @@ python train_target.py
 python domain_inversion.py
 (4) Adaptation stage: source model adapts to the target domain
 python train_adapt.py 
-5. ADAMI Method:
+6. ADAMI Method:
 (1) Source code link: [ADAMI](https://github.com/mathilde-b/SFDA)
 (2) Please click ADAMI file
 (3) Adaptation stage: source model adapts to the target domain
