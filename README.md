@@ -14,11 +14,10 @@ pip install -r requirements.txt
 - 1. Download the dataset in the paper and modify the relevant path in the configuration file.
 - 2. Source Model Train
    -- We use the code provided by [ProSFDA](https://github.com/ShishuaiHu/ProSFDA) to train the source model. If you want to use our trained source model, please contact me.
-- 3. DPL Method: Generation phase: Generate target domain pseudo-labels
+- 3. Six Methods: 
 ```shell
-          python generate_pseudo.py
-```
-      Adaptation stage: the source model adapts to the target domain
-```shell
-          python Train_target.py
-```
+1. DPL Model:
+(1) Generation phase: Generate target domain pseudo-labels
+python generate_pseudo.py
+(2) Adaptation stage: the source model adapts to the target domain
+python Train_target.py
