@@ -6,8 +6,7 @@ import xlwt
 def return_list(data_path,data_type):
     file_list = [file for file in os.listdir(data_path) if file.lower().endswith(data_type)]
     return file_list
-# 标签图像的  背景0    OD255   OC128
-# 标签图像的  背景255  OD128   OC0
+
 def eval_print_all_CU(pred_img_path, gt_img_path):
     f = open(pred_img_path + "_preCDR.txt", "a")
     new_workbook = xlwt.Workbook()
