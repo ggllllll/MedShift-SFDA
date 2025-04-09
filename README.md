@@ -10,5 +10,8 @@ activate MedShift-SFDA
 conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=11.0 -c pytorch
 pip install -r requirements.txt
 ```
-### Method
-- 1. Source-Free Domain Adaptive Fundus Image Segmentation with Denoised Pseudo-Labeling[DPL](https://github.com/cchen-cc/SFDA-DPL)
+### Paper Name, Paper Address, Code Address
+- 1. Paper Name: Source-Free Domain Adaptive Fundus Image Segmentation with Denoised Pseudo-Labeling
+     Paper Address:
+     Code Address: (https://github.com/cchen-cc/SFDA-DPL)
+  2. 
