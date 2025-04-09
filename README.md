@@ -14,7 +14,7 @@ pip install -r requirements.txt
 - 1. Download the dataset in the paper and modify the relevant path in the configuration file.
 - 2. Source Model Train
    -- We use the code provided by [ProSFDA](https://github.com/ShishuaiHu/ProSFDA) to train the source model. If you want to use our trained source model, please contact me.
-- 3. Six Methods: 
+- 3. Steps to debug six methods: 
 ```shell
 1. DPL Method:
 (1) Source code link: [DPL](https://github.com/cchen-cc/SFDA-DPL)
